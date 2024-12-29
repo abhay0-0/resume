@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhay's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e2f;
+            color: #fff;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        header {
+            background-color: #282a36;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo {
+            color: #50fa7b;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #50fa7b;
+        }
+
+        #hero {
+            background: linear-gradient(135deg, #282a36, #44475a);
+            text-align: center;
+            padding: 5rem 1rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #50fa7b;
+            margin-bottom: 1rem;
+            animation: bounceIn 2s ease;
+        }
+
+        .hero-content h2 {
+            font-size: 2.5rem;
+            color: #50fa7b;
+            animation: slideInLeft 2s;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #50fa7b;
+            color: #282a36;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #40c567;
+        }
+
+        #about, #projects, #contact {
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            animation: fadeInDown 1.5s;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-box {
+            background-color: #44475a;
+            padding: 2rem;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0.5rem;
+            color: #50fa7b;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #40c567;
+        }
+
+        footer {
+            background-color: #282a36;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 3rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes bounceIn {
+            0% { transform: scale(0.5); opacity: 0; }
+            50% { transform: scale(1.1); opacity: 0.7; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes slideInLeft {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Abhay</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">My Games</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <img src="batman.jpeg" alt="Abhay's photo" class="profile-pic">
+            <h2>Hi, I'm Abhay</h2>
+            <p>Aspiring Game Developer | Unity Enthusiast</p>
+            <a href="#projects" class="btn">View My Games</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I am a passionate game developer with experience in Unity, 3D design, and programming. I love creating immersive experiences and solving gameplay challenges with creativity and technical skills.</p>
+            <p>Skills: Unity, C#, Blender (learning), HTML/CSS/JS, storytelling for games, and more.</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>My Games</h2>
+            <div class="projects-grid">
+                <div class="project-box">Game 1</div>
+                <div class="project-box">Game 2</div>
+                <div class="project-box">Game 3</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <div class="social-links">
+                <a href="mailto:abhay@example.com">Email</a>
+                <a href="https://www.instagram.com/abhayy.0_0/" target="_blank">Instagram</a>
+                <a href="https://abhayy0-0.itch.io/" target="_blank">Itch.io</a>
+                <a href="https://www.linkedin.com/in/abhay-33036b196/" target="_blank">LinkedIn</a>
+                <a href="https://x.com/abhay_devx" target="_blank">Twitter</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Abhay. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
